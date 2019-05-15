@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    CSS selector là bộ chọn css để chọn các thẻ html mà các bạn mong muốn ví dụ:
+    .class, #id, tag_name ( body, div, p...)
+
+    jquery selector là bộ chọn jquery để chọn các thẻ mà các bạn mong muốn
+</div>
+
+<div style="margin-top: 30px">
+    <button type="button" id="control">click</button>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // sự kiện click
+        // truyền vào method click() 1 callback
+        $("#control").click(function () {
+            // phương thức css trong jquery can thiệp vào css của đối tượng
+            // và 2 tham số . tham số 1 là tên của thuộc tính css
+            // tham số thứ 2 là giá trị của thuộc tính đó
+            $(".container").css("background", "orange");
+            $(".container").css("padding", "30px");
+            $(".container").css("color", "green");
+        });
+    });
+</script>
+</body>
+</html>

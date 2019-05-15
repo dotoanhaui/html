@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> phương thức on trong jquery cho phép bạn gắn nhiều sự kiện và callback vào 1 dối tượng </h1>
+<p>các method click() dblclick()... chỉ cho phép gắn 1 sự kiện</p>
+
+<div class="container" style="padding: 20px; background: deeppink">
+    phương thức on trong jquery cho phép bạn gắn nhiều sự kiện và callback vào 1 dối tượng
+    phương thức on trong jquery cho phép bạn gắn nhiều sự kiện và callback vào 1 dối tượng
+    phương thức on trong jquery cho phép bạn gắn nhiều sự kiện và callback vào 1 dối tượng
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //khi mà gắn riêng lẻ từng sự kiện
+        //tham số 1 là tên sự kiện
+        //tham số 2 là callback của sự kiện đó
+        $(".container").on("click",function () {
+            $(this).css("background", "orange");
+        });
+        $(".container").on("dblclick",function () {
+            $(this).css("background", "green");
+        });
+        $(".container").on("mouseenter",function () {
+            $(this).css("background", "greenyellow");
+        });
+        $(".container").on("mouseleave",function () {
+            $(this).css("background", "red");
+        });
+    });
+</script>
+</body>
+</html>
